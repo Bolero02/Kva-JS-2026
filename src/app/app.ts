@@ -1,17 +1,22 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLinkWithHref],
+  imports: [RouterOutlet,
+    RouterLinkWithHref,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('klijentske-veb-aplikacije-2027');
-  ime = "Bojan";
-  prezime = "Kojic";
-  indeks = '2021200834';
+
 }
 
 //Korena komponenta se on prvi ucitava
